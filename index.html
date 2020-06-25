@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向滚动Bar — 某个Tab回滚定位到中间的实现</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="tab" ref="tab">
+            <span 
+                v-for="(item, index) in list" 
+                :class="['tab-item', { 'tab-item-active' : index === activeBar }]"
+                ref="tabItem"
+                @click="barOnClick(index)"
+            >{{item}}</span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
